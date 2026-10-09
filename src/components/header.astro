@@ -1,0 +1,17 @@
+---
+const enlaces = [
+    { nombre: "Inicio", url: "/" },
+    { nombre: "Talleres", url: "/talleres" },
+    { nombre: "Nosotros", url: "/nosotros" },
+];
+---
+
+<header class="encabezado">
+    <a class="logo" href="/">Espacio Cultural</a>
+
+    <nav aria-label="Navegación principal">
+    {enlaces.map((enlace) => (
+        <a href={enlace.url}>{enlace.nombre}</a>
+    ))}
+    </nav>
+</header>
